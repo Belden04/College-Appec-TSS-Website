@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College APPEC TSS - Remera Rukoma</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ 
+  <header class="header">
+    <div class="logo">
+      <img src="1.png" alt="College APPEC TSS">
+      <h2>College APPEC TSS</h2>
+    </div>
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#trades">Trades</a>
+      <a href="#admissions">Admissions</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle"><i class='bx bx-moon'></i></button>
+      <select id="lang-switch">
+        <option value="en">EN</option>
+        <option value="rw">RW</option>
+      </select>
+    </nav>
+  </header>
+
+ 
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Empowering Rwanda's Future</h1>
+      <p>Develop skills in Software, Systems, Accounting & Construction</p>
+      <a href="#trades" class="btn">Explore Programs</a>
+    </div>
+  </section>
+
+  
+  <section id="about" class="about">
+    <h2>About Our College</h2>
+    <p>
+      College APPEC TSS located in Remera Rukoma, Kamonyi District, is a Technical Secondary School
+      committed to developing skilled professionals who contribute to Rwanda’s growth and innovation.
+    </p>
+    <div class="about-grid">
+      <div><i class='bx bxs-graduation'></i><h3>Quality Education</h3><p>Hands-on learning experiences in technology and trades.</p></div>
+      <div><i class='bx bx-world'></i><h3>Community Impact</h3><p>We prepare students to solve real-world problems.</p></div>
+      <div><i class='bx bx-code-alt'></i><h3>Innovation</h3><p>Encouraging creativity and digital transformation.</p></div>
+    </div>
+  </section>
+
+  
+  <section id="trades" class="trades">
+    <h2>Our Trades</h2>
+    <div class="trade-grid">
+      <div class="card">
+        <img src="assets/trades/software.jpg" alt="">
+        <h3>Software Development</h3>
+        <p>Learn web, mobile and app development using modern tools.</p>
+      </div>
+      <div class="card">
+        <img src="assets/trades/computer.jpg" alt="">
+        <h3>Computer Systems & Architecture</h3>
+        <p>Master computer hardware, networks, and system installation.</p>
+      </div>
+      <div class="card">
+        <img src="assets/trades/accounting.jpg" alt="">
+        <h3>Accounting</h3>
+        <p>Develop financial management and business skills for the future.</p>
+      </div>
+      <div class="card">
+        <img src="assets/trades/construction.jpg" alt="">
+        <h3>Building Construction</h3>
+        <p>Gain practical skills in design, engineering, and project planning.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="admissions" class="admissions">
+    <h2>Admissions</h2>
+    <p>Apply online to join one of our technical programs.</p>
+    <form id="apply-form">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <select required>
+        <option value="">Select Trade</option>
+        <option>Software Development</option>
+        <option>Computer Systems & Architecture</option>
+        <option>Accounting</option>
+        <option>Building Construction</option>
+      </select>
+      <textarea placeholder="Why do you want to join?" rows="4"></textarea>
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
+
+ 
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <div><i class='bx bx-map'></i> Remera Rukoma, Kamonyi District, Rwanda</div>
+      <div><i class='bx bx-envelope'></i> info@appectss.rw</div>
+      <div><i class='bx bx-phone'></i> +250 788 123 456</div>
+    </div>
+    <a href="https://goo.gl/maps/" target="_blank" class="btn">View on Map</a>
+  </section>
+
+  
+  <footer>
+    <p>© 2025 College APPEC TSS | Developed by Belden Right</p>
+  </footer>
+
+  <script>
+   
+const themeBtn = document.getElementById('theme-toggle');
+themeBtn.onclick = () => {
+  document.body.classList.toggle('dark');
+  const icon = themeBtn.querySelector('i');
+  icon.classList.toggle('bx-sun');
+};
+
+
+const langSwitch = document.getElementById('lang-switch');
+langSwitch.addEventListener('change', (e) => {
+  const lang = e.target.value;
+  alert(`Language switched to ${lang === 'rw' ? 'Kinyarwanda' : 'English'} (demo)`);
+});
+
+
+const form = document.getElementById('apply-form');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert('Application submitted successfully! (Demo only)');
+});
+
+  </script>
+</body>
+</html>
